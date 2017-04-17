@@ -1,6 +1,6 @@
 
 package tRayas;
-
+//CREADO CARLOS
 
 public class tRayas extends javax.swing.JFrame {
 
