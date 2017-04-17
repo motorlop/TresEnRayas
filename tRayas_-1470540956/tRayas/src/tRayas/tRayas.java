@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tRayas;
 
 
@@ -100,6 +96,19 @@ public class tRayas extends javax.swing.JFrame {
         setC(contador);
     }
     
+    public void reiniciar(){
+        jButton11.setText("");
+        jButton12.setText("");
+        jButton13.setText("");
+        jButton21.setText("");
+        jButton22.setText("");
+        jButton23.setText("");
+        jButton31.setText("");
+        jButton32.setText("");
+        jButton33.setText("");
+        setC(0);
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -114,6 +123,7 @@ public class tRayas extends javax.swing.JFrame {
         jButton32 = new javax.swing.JButton();
         jButton33 = new javax.swing.JButton();
         gana = new javax.swing.JLabel();
+        reinicioJB = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -180,14 +190,20 @@ public class tRayas extends javax.swing.JFrame {
             }
         });
 
+        reinicioJB.setText("Reiniciar");
+        reinicioJB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reinicioJBActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(gana, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -203,7 +219,11 @@ public class tRayas extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(gana, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(reinicioJB)))
                 .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
@@ -229,7 +249,11 @@ public class tRayas extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addComponent(gana, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(gana, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(reinicioJB)))
                 .addContainerGap())
         );
 
@@ -299,6 +323,10 @@ public class tRayas extends javax.swing.JFrame {
         boton();
     }//GEN-LAST:event_jButton33ActionPerformed
 
+    private void reinicioJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reinicioJBActionPerformed
+        reiniciar();
+    }//GEN-LAST:event_reinicioJBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -345,5 +373,6 @@ public class tRayas extends javax.swing.JFrame {
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
+    private javax.swing.JToggleButton reinicioJB;
     // End of variables declaration//GEN-END:variables
 }
